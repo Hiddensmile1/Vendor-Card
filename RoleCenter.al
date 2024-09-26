@@ -1,7 +1,7 @@
 page 50190 RoleCenterName
 {
     PageType = RoleCenter;
-
+    Caption = 'My Role Center';
 
     actions
     {
@@ -71,6 +71,51 @@ page 50190 RoleCenterName
                 Caption = 'Inventory Lists';
                 RunObject = Page "Inventory Comment List";
                 ApplicationArea = All;
+            }
+        }
+
+        area(Creation)
+        {
+            action(AddPurchaseOrder)
+            {
+                Caption = 'Add Purchase Order';
+                RunObject = Page "Purchase Order";
+                ApplicationArea = All;
+                RunPageMode = Create;
+            }
+            action(AddPurchaseInvoice)
+            {
+                Caption = 'Add Purchase Invoice';
+                RunObject = Page "Purchase Invoice";
+                ApplicationArea = All;
+                RunPageMode = Create;
+            }
+            action(AddPurchaseQuote)
+            {
+                Caption = 'Add Purchase Quote';
+                RunObject = Page "Purchase Quote";
+                ApplicationArea = All;
+                RunPageMode = Create;
+            }
+        }
+
+        area(Processing)
+        {
+            action(PurchaseInvoiceProcess)
+            {
+                Caption = 'Purchase Invoice';
+                RunObject = Page "Purchase Invoice";
+                ApplicationArea = All;
+            }
+        }
+        area(Reporting)
+        {
+            action(PurchaseInvoiceReport)
+            {
+                Caption = 'Purchase Invoice Report';
+                RunObject = Report "Purchase - Invoice";
+                ApplicationArea = All;
+                Image = Report;
             }
         }
     }
