@@ -3,6 +3,19 @@ page 50190 RoleCenterName
     PageType = RoleCenter;
     Caption = 'My Role Center';
 
+    layout
+    {
+        area(RoleCenter)
+        {
+            group(Group1)
+            {
+                part(Part1; RoleCenterHeadline)
+                {
+                    ApplicationArea = All;
+                }
+            }
+        }
+    }
     actions
     {
         area(Sections)
