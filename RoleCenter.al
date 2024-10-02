@@ -14,6 +14,20 @@ page 50190 RoleCenterName
                     ApplicationArea = All;
                 }
             }
+            group(Customer)
+            {
+                part("Customer Sales History"; "Customer Sales History")
+                {
+                    ApplicationArea = All;
+                }
+            }
+            group(Shipment)
+            {
+                part("Pending Shipments"; "Pending Shipments")
+                {
+                    ApplicationArea = All;
+                }
+            }
         }
     }
     actions
